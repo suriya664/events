@@ -1,0 +1,28 @@
+<!-- Modal Structure -->
+<div class="modal" id="example-modal">
+  <div class="modal-content" style="max-width: 600px; background: var(--bg); padding: 32px; border-radius: 12px;">
+    <button class="modal-close" style="float: right; background: none; border: none; font-size: 24px; cursor: pointer;">✕</button>
+    <h2>Modal Title</h2>
+    <p>Modal content goes here</p>
+  </div>
+</div>
+
+<style>
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.active {
+  display: flex;
+}
+</style>
+

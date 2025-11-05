@@ -1,0 +1,142 @@
+/* ========================================
+   RESPONSIVE STYLES - MOBILE FIRST
+   ======================================== */
+
+/* === TABLET (768px and up) === */
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .hero h1 {
+    font-size: var(--fs-48);
+  }
+  
+  .hero p {
+    font-size: var(--fs-24);
+  }
+}
+
+/* === DESKTOP (1024px and up) === */
+@media (min-width: 1024px) {
+  .navbar-menu {
+    display: flex;
+  }
+  
+  .navbar-toggle {
+    display: none;
+  }
+  
+  .hero {
+    min-height: 700px;
+  }
+  
+  .section {
+    padding: var(--spacing-64) 0;
+  }
+}
+
+/* === MOBILE (< 768px) === */
+@media (max-width: 767px) {
+  :root {
+    --fs-48: 32px;
+    --fs-32: 24px;
+    --fs-24: 20px;
+  }
+  
+  .navbar-toggle {
+    display: block;
+  }
+  
+  .navbar-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    padding: var(--spacing-24);
+    gap: var(--spacing-16);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-menu.active {
+    transform: translateX(0);
+  }
+  
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero {
+    min-height: 500px;
+    padding: var(--spacing-32) var(--container-padding);
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+  }
+  
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-16);
+  }
+  
+  .timeline-content {
+    padding-left: 0;
+    border-left: none;
+    border-top: 2px solid var(--border);
+    padding-top: var(--spacing-16);
+  }
+  
+  .timeline-content::before {
+    display: none;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-24);
+  }
+  
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+  
+  .pricing-card {
+    max-width: 100%;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === LARGE MOBILE (480px - 767px) === */
+@media (min-width: 480px) and (max-width: 767px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+

@@ -1,0 +1,25 @@
+/* ========================================
+   RTL (RIGHT-TO-LEFT) SUPPORT
+   ======================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .navbar-menu {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .timeline-content {
+  padding-left: 0;
+  padding-right: var(--spacing-24);
+  border-left: none;
+  border-right: 2px solid var(--border);
+}
+
+[dir="rtl"] .timeline-content::before {
+  left: auto;
+  right: -6px;
+}
+

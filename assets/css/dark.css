@@ -1,0 +1,35 @@
+/* ========================================
+   DARK MODE STYLES
+   ======================================== */
+
+[data-theme="dark"] {
+  --text: #f9fafb;
+  --text-light: #d1d5db;
+  --bg: #1f2937;
+  --bg-gray: #374151;
+  --border: #4b5563;
+}
+
+[data-theme="dark"] body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+[data-theme="dark"] .navbar {
+  background: var(--bg);
+  border-bottom-color: var(--border);
+}
+
+[data-theme="dark"] .card {
+  background: var(--bg-gray);
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .form-input,
+[data-theme="dark"] .form-textarea,
+[data-theme="dark"] .form-select {
+  background: var(--bg-gray);
+  border-color: var(--border);
+  color: var(--text);
+}
+
